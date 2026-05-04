@@ -1,3 +1,39 @@
+
+
+@font-face {
+  font-family: 'Medieval Sharp Book';/*normal-no negrita*/
+  font-style: normal;
+  font-weight: 300;
+  src: local('Medieval Sharp Book'),
+  url('/public/font/MedievalSharp-Book.woff')format('woff');
+}
+/*cursiva- no negrita*/
+@font-face {
+  font-family: 'Medieval Sharp Book Oblique';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Medieval Sharp Book Oblique'),
+  url('public\font\MedievalSharp-BookOblique.woff')format('woff');
+}
+/*normal-negrita*/
+@font-face {
+  font-family: 'Medieval Sharp Bold ';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Medieval Sharp Bold'),
+  url('public\font\MedievalSharp-Bold.woff')format('woff');
+}
+/*crsiva-negrita*/
+@font-face {
+  font-family: 'Medieval Sharp Bold Oblique';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Medieval Sharp BoldOblique'),
+  url('/public/font/MedievalSharp-BoldOblique.woff')format('woff');
+}
+
+/*siempre incorporar una tipografia al principio*/
+
 /* Reset */
 * {
     padding: 0;
@@ -16,4 +52,8 @@ body {
     border: 1px solid crimson;
     margin: auto;
 }
-
+h1{
+  font-family: 'Medieval Sharp Book', sans-serif;
+  font-style: italic;
+  font-weight: 700;
+}
