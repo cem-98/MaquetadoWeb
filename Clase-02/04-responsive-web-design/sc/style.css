@@ -1,0 +1,115 @@
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eee;
+    /* Tipografía segura -> Todos los SO van a tener alguna de estás tipografías */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #333;
+
+    height: 1500px;
+}
+
+.contenedor {
+    max-width: 900px;
+    border: 1px solid crimson;
+    margin: auto;
+}
+
+.caja-padre {
+    width: 600px;
+    height: 600px;
+    margin: 40px auto;
+    border: 5px solid gold;
+
+    position: relative; /* Posición el padre de .absolute */
+}
+
+.caja {
+    background-color: crimson;
+    width: 100px;
+    height: 100px;
+    text-align: center; /* centra horizontalmente los textos */
+    color: white;
+    font-weight: bold;
+    line-height: 100px; /* centra verticalmente el texto */
+}
+
+/* Por default todos los elementos html están posicionados como estáticos */
+/* position: static */
+
+.static {
+    position: static;
+    background-color: darkblue;
+    top: 10px; /* no funciona */
+    bottom: 50px; /* no funciona */
+    right: 40px; /* no funciona */
+    left: 100px; /* no funciona */
+}
+
+.relative {
+    position: relative;
+    left: 0; /* left y right -> x */
+    /* right: 100px; */
+    /* top: 100px; */ /* top y bottom -> y */
+    bottom: 0;
+    background-color: darkorange;
+}
+
+/* El div con la clase .absolute salio del flujo. Es como si nunca lo hubiera definido dentro del html */
+/* Ese elemento que está absolute si previamente ningun contenedor tiene definido un position de static. El div.absolute se a posición con respecto al viewport (a la ventana del navegador) */
+/* Que si el contenedor está posicionada de alguna manera */
+
+.absolute {
+    position: static;
+    right: -50px;
+    top: -50px;
+    /* border-radius: 50%; */
+
+    background-color: darkgreen;
+}
+/* El div con la clase .fixed salio del flujo. Es como si nunca lo hubiera definido dentro del html */
+/* A diferencia de Absolute, fixed no se fija en la posición del padre. La descarta y se posicina con respecto a los bordes del navegador. */
+
+.fixed {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    border-radius: 50%;
+
+    background-color: darkgoldenrod;
+}
+/* Que los elementos estén posicionados y que sea distinto de static */
+/* z index es cero */
+.relative-1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background-color: darkred;
+}
+.relative-2 {
+    position: relative;
+    top: -50px; /* y */
+    left: 0; /* x */
+    z-index: 10;
+    background-color: darkblue;
+}
+.relative-3 {
+    position: relative;
+    top: -100px; /* y */
+    left: 0; /* x */
+    z-index: 15;
+    background-color: darkgreen;
+}
+.relative-4 {
+    position: relative;
+    top: -150px; /* y */
+    left: 0; /* x */
+    z-index: 20;
+    background-color: darkorange;
+}
